@@ -1,0 +1,73 @@
+.navLink {
+  display: block;
+  line-height: 1;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--benchling-body) !important;
+  transition: color 150ms ease;
+}
+
+.navLink:hover {
+  color: var(--benchling-heading) !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.navLinkActive {
+  color: var(--benchling-heading) !important;
+  font-weight: 600;
+}
+
+.navLinkLight {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+.navLinkLight:hover {
+  color: #ffffff !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.navLinkLightActive {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.scrollContainer {
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollContainer::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.scrollContainer::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.shopBtn {
+  background: linear-gradient(135deg, #4175fc 0%, #4175fc 40%, #084af3 100%) !important;
+  border: none !important;
+  color: #fff !important;
+  transition:
+    filter 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.shopBtn:hover {
+  filter: brightness(1.06);
+  box-shadow: 0 4px 14px rgba(8, 74, 243, 0.35);
+}

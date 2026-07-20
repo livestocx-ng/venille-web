@@ -1,0 +1,225 @@
+/* Global Styles — Venille brand (derived from venille.com.ng) */
+
+:root {
+  --venille-primary: #084af3;
+  --venille-primary-light: #4175fc;
+  --venille-primary-dark: #0639c2;
+  --venille-primary-muted: #a8c4fb;
+  --venille-primary-subtle: #e8effe;
+
+  --venille-ink: #101218;
+  --venille-text: #494b51;
+  --venille-text-muted: #4b4f58;
+
+  --venille-white: #ffffff;
+  --venille-surface: #f3f5f5;
+  --venille-bg: #f6f7f8;
+  --venille-border: #eaeaea;
+
+  --venille-radius-card: 20px;
+  --venille-radius-button: 12px;
+  --venille-radius-pill: 100px;
+  --venille-shadow-card: 0 4px 24px rgba(16, 18, 24, 0.06);
+  --venille-shadow-soft: 0 12px 32px rgba(16, 18, 24, 0.08);
+  --venille-gradient-primary: linear-gradient(135deg, #4175fc 0%, #084af3 100%);
+  --venille-gradient-ink: radial-gradient(circle at 20% 0%, rgba(65, 117, 252, 0.22) 0%, rgba(16, 18, 24, 0) 45%);
+  --venille-section-py: 64px;
+
+  /* Benchling-style enterprise tokens */
+  --benchling-heading: #0b0d12;
+  --benchling-body: #3d3f45;
+  --benchling-muted: #6b6e76;
+  --benchling-surface: #f7f7f8;
+  --benchling-border: #e5e5e5;
+  --benchling-radius-card: 10px;
+  --benchling-radius-button: 6px;
+  --benchling-section-py: 64px;
+
+  --mantine-color-body: var(--venille-white);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --venille-section-py: 96px;
+    --benchling-section-py: 96px;
+  }
+}
+
+body {
+  background-color: var(--venille-white) !important;
+  color: var(--benchling-body);
+  overflow-x: hidden;
+  font-feature-settings: 'ss01' on;
+}
+
+a {
+  color: inherit;
+}
+
+.venille-section {
+  padding-top: var(--venille-section-py);
+  padding-bottom: var(--venille-section-py);
+}
+
+.venille-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--venille-primary);
+}
+
+.sponsors-marquee-viewport {
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+.sponsors-marquee-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: clamp(48px, 6vw, 80px);
+  padding: 0 clamp(24px, 4vw, 48px);
+}
+
+.sponsors-marquee-item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 72px;
+  min-width: 72px;
+  max-width: 160px;
+}
+
+.sponsors-marquee-item img {
+  max-height: 64px;
+  max-width: 150px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sponsors-marquee-track {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    transform: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.mantine-Carousel-viewport {
+  cursor: grab;
+}
+
+.mantine-Carousel-viewport:active {
+  cursor: grabbing;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mantine-Carousel-viewport {
+    scroll-behavior: auto;
+  }
+}
+
+.mochi-card {
+  border-radius: 24px;
+  background: var(--venille-white);
+  border: 1px solid var(--venille-border);
+  box-shadow: var(--venille-shadow-soft);
+}
+
+.mochi-hero-shell {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid rgba(8, 74, 243, 0.16);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.98) 100%);
+}
+
+/* Benchling-style utilities */
+.benchling-section {
+  padding-top: var(--benchling-section-py);
+  padding-bottom: var(--benchling-section-py);
+}
+
+.benchling-card {
+  border-radius: var(--benchling-radius-card);
+  background: var(--venille-white);
+  border: 1px solid var(--benchling-border);
+}
+
+.benchling-link {
+  color: var(--venille-primary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9375rem;
+}
+
+.benchling-link:hover {
+  text-decoration: underline;
+}
+
+.benchling-heading {
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.benchling-tab {
+  padding: 10px 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--benchling-muted);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.benchling-tab:hover {
+  color: var(--benchling-heading);
+}
+
+.benchling-tab[data-active='true'] {
+  color: var(--benchling-heading);
+  border-bottom-color: var(--benchling-heading);
+  font-weight: 600;
+}
+
+.logo-strip-item img {
+  filter: grayscale(100%);
+  opacity: 0.65;
+  transition: opacity 0.2s, filter 0.2s;
+}
+
+.logo-strip-item:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}

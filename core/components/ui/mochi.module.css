@@ -1,0 +1,109 @@
+.carouselWrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carouselCard {
+  height: 100%;
+  min-height: 260px;
+}
+
+.stepCard {
+  border-radius: 20px;
+  border: 1px solid var(--venille-border);
+  background: var(--venille-white);
+  padding: 0;
+  height: 100%;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.stepCardBody {
+  padding: 24px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.stepCardImage {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+.railCardImage {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 4px;
+}
+
+.stepCardDark {
+  composes: stepCard;
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.stepNumber {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -3px;
+  color: var(--venille-primary);
+}
+
+.railCard {
+  border-radius: 20px;
+  border: 1px solid var(--venille-border);
+  background: var(--venille-white);
+  padding: 28px;
+  height: 100%;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.railCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(8, 74, 243, 0.1);
+}
+
+.trustPill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--venille-white);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+}
+
+.communityBanner {
+  border-radius: 24px;
+  background: var(--venille-primary);
+  padding: clamp(40px, 6vw, 64px);
+  text-align: center;
+}
+
+.expertCard {
+  border-radius: 20px;
+  border: 1px solid var(--venille-border);
+  background: var(--venille-white);
+  padding: 24px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .railCard:hover {
+    transform: none;
+  }
+}

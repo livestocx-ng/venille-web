@@ -2,7 +2,7 @@
   "compilerOptions": {
     "types": ["node", "jest", "@testing-library/jest-dom"],
     "target": "es5",
-    "ignoreDeprecations": "6.0",
+    "ignoreDeprecations": "5.0",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,

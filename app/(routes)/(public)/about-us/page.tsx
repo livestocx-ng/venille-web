@@ -298,7 +298,7 @@ export default function AboutUsPage() {
           //   name: teamMembers[0].name,
           //   role: teamMembers[0].role,
           //   image: teamMembers[0].image,
-          //   credential: 'Venille Co-Founder',
+          //   credential: 'Venille CEO',
           // }}
         />
       </Section>

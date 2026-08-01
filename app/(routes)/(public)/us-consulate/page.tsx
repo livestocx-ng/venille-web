@@ -166,7 +166,7 @@ export default function UsConsulatePage() {
                   color: '#3D3F45',
                 }}
               >
-                Our co-founder, Esther Oluwabunmi Olalude, was a part of the U.S. Consulate General
+                Our CEO, Esther Oluwabunmi Olalude, was a part of the U.S. Consulate General
                 Lagos’ Speaker Program on Artificial Intelligence: &ldquo;AI for Business: Driving
                 Innovation and Productivity&rdquo; held on Wednesday, February 25, 2026, at 21st
                 Century Technologies, Lekki Phase 1, which was organized by the Public Diplomacy

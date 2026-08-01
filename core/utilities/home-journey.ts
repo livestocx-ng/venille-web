@@ -19,7 +19,7 @@ export const howItWorksSteps = [
     step: '03',
     title: 'AI for Business — US Consulate',
     description:
-      'Our co-founder, Esther Oluwabunmi Olalude, represented Venille at the U.S. Consulate General Lagos Speaker Program on Artificial Intelligence — February 25, 2026 at 21st Century Technologies, Lekki Phase 1.',
+      'Our CEO, Esther Oluwabunmi Olalude, represented Venille at the U.S. Consulate General Lagos Speaker Program on Artificial Intelligence — February 25, 2026 at 21st Century Technologies, Lekki Phase 1.',
     image: '/images/hero/image_hero copy 2.jpg',
     imageAlt: 'Venille at U.S. Consulate Lagos Speaker Program',
   },

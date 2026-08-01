@@ -4,7 +4,7 @@ import { SITE_URL } from '@/core/utilities';
 export const metadata: Metadata = {
   title: 'Venille - US Consulate',
   description:
-    'Venille co-founder Esther Oluwabunmi Olalude at the U.S. Consulate General Lagos AI for Business program, February 25, 2026.',
+    'Venille CEO Esther Oluwabunmi Olalude at the U.S. Consulate General Lagos AI for Business program, February 25, 2026.',
   keywords: [
     'Venille',
     'US Consulate',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Venille - US Consulate',
     description:
-      'Venille co-founder Esther Oluwabunmi Olalude at the U.S. Consulate General Lagos AI for Business program, February 25, 2026.',
+      'Venille CEO Esther Oluwabunmi Olalude at the U.S. Consulate General Lagos AI for Business program, February 25, 2026.',
     url: `${SITE_URL}/us-consulate`,
     siteName: 'Venille',
     type: 'website',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     creator: '@venilleng',
     title: 'Venille - US Consulate',
     description:
-      'Venille co-founder Esther Oluwabunmi Olalude at the U.S. Consulate General Lagos AI for Business program, February 25, 2026.',
+      'Venille CEO Esther Oluwabunmi Olalude at the U.S. Consulate General Lagos AI for Business program, February 25, 2026.',
     images: [
       {
         url: 'https://afritint-media.s3.eu-north-1.amazonaws.com/versions/original/975f9859-8d4f-4750-b8c0-996558021936.jpeg',

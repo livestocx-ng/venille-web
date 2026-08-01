@@ -18,7 +18,7 @@ export default function ComparisonSection() {
           eyebrow="Why Venille"
           title="The shortest route away"
           accent="from conventional pads."
-          description="Same need, same outcome — but look how much harm conventional pads leave behind."
+          description="Same need, same outcome, but look how much harm conventional pads leave behind."
         />
         <SimpleGrid
           cols={{ base: 1, md: 3 }}

@@ -66,7 +66,7 @@ export default function SpotlightAiSection() {
         eyebrow=""
         accent="companion."
         title="Your private digital health"
-        description="Venille AI helps girls and young women manage menstrual and sexual health privately and confidently — via WhatsApp, mobile app, and USSD, with period tracking, education, and access to eco-friendly Venille pads."
+        description="Venille AI helps girls and young women manage menstrual and sexual health privately and confidently, via WhatsApp, mobile app, and USSD, with period tracking, education, and access to eco-friendly Venille pads."
         chips={['WhatsApp', 'Mobile App', 'USSD', 'Period Tracking']}
         light
         reverse

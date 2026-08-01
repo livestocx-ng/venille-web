@@ -18,10 +18,10 @@ export const productDisplayTypes: ProductDisplayType[] = [
 ];
 
 export const navLinks = [
-  { link: '/about-us', label: 'About', target: '' },
   { link: '/contact-us', label: 'Contact', target: '' },
-  { link: '/venille-ai', label: 'Venille AI', target: '' },
+  { link: 'https://ai.venille.com.ng', label: 'Venille AI', target: '_blank' },
   { link: '/us-consulate', label: 'US Consulate', target: '' },
+  // { link: '/about-us', label: 'About', target: '' },
 ];
 
 export const blogPosts = [
@@ -150,7 +150,7 @@ export const platformFeatures = [
   {
     title: 'Maximum Comfort',
     description:
-      'Many sanitary products are too short, too thick, or cause rash. Venille pads eliminate these discomforts — you won\'t even know you\'re wearing a pad.',
+      'Many sanitary products are too short, too thick, or cause rash. Venille pads eliminate these discomforts, you won\'t even know you\'re wearing a pad.',
     icon: IconUsers,
   },
 ];
@@ -184,19 +184,19 @@ export const teamMembers = [
     linkedin: '',
     image: '/images/team/esther.jpg',
   },
-  {
-    name: 'Nwagboso Prayer',
-    role: 'Co-Founder & Girls Advocate',
-    bio: 'As a girls and women advocate, Prayer is deeply concerned about period poverty and plastic pollution from sanitary pads. She co-founded Venille to counter both challenges.',
-    extendedBio:
-      'Founder & CEO of Naza Agape Foundation, Prayer has impacted 18,000+ lives through education, welfare, and empowerment programmes. She leads community outreach, free pad distributions, and menstrual hygiene sensitization.',
-    quote:
-      'We aim to reduce plastic pollution and tackle period poverty by offering a sustainable solution that helps girls stay in school with dignity.',
-    highlights: ['Founder & CEO, Naza Agape Foundation', 'ForbesBLK Member'],
-    credentials: ['BBC News Africa', 'BusinessDay Nigeria'],
-    linkedin: 'https://linkedin.com/in/prayer-nwagboso-54461a174',
-    image: 'https://venille.com.ng/wp-content/uploads/2023/07/WhatsApp-Image-2023-07-09-at-10.00.54-AM.jpg',
-  },
+  // {
+  //   name: 'Nwagboso Prayer',
+  //   role: 'Co-Founder & Girls Advocate',
+  //   bio: 'As a girls and women advocate, Prayer is deeply concerned about period poverty and plastic pollution from sanitary pads. She co-founded Venille to counter both challenges.',
+  //   extendedBio:
+  //     'Founder & CEO of Naza Agape Foundation, Prayer has impacted 18,000+ lives through education, welfare, and empowerment programmes. She leads community outreach, free pad distributions, and menstrual hygiene sensitization.',
+  //   quote:
+  //     'We aim to reduce plastic pollution and tackle period poverty by offering a sustainable solution that helps girls stay in school with dignity.',
+  //   highlights: ['Founder & CEO, Naza Agape Foundation', 'ForbesBLK Member'],
+  //   credentials: ['BBC News Africa', 'BusinessDay Nigeria'],
+  //   linkedin: 'https://linkedin.com/in/prayer-nwagboso-54461a174',
+  //   image: 'https://venille.com.ng/wp-content/uploads/2023/07/WhatsApp-Image-2023-07-09-at-10.00.54-AM.jpg',
+  // },
 ];
 
 export const appFeatures = [

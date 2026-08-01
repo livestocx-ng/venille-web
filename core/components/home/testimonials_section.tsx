@@ -23,8 +23,8 @@ const testimonials = [
   {
     quote:
       'As a girls advocate, I am proud to support a product that tackles both period poverty and plastic pollution at the same time.',
-    name: 'Nwagboso Prayer',
-    location: 'Co-Founder, Venille',
+    name: 'Zainab Ahmed',
+    location: 'Nasarawa, Nigeria',
     avatarSrc: '/images/testimonials/avatar_aisha.png',
   },
   {

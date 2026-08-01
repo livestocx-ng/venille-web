@@ -175,6 +175,10 @@ export function Navbar() {
                 </Menu.Dropdown>
               </Menu>
 
+              {/* <Link href="/about-us" target="" className={navLinkClass('/about-us')}>
+                About Us
+              </Link> */}
+
               {contactLink && (
                 <Link
                   href={contactLink.link}

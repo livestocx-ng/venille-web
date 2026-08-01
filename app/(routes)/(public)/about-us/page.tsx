@@ -45,7 +45,7 @@ export default function AboutUsPage() {
           paddingTop: 'clamp(160px, 15vw, 220px)',
           minHeight: '100%',
           paddingBottom: 'clamp(100px, 10vw, 150px)',
-          backgroundImage: `linear-gradient(to bottom, rgba(16, 18, 24, 0.26) 0%, rgba(16, 18, 24, 0.6) 100%), url('/images/hero/image_hero_5.jpg')`,
+          backgroundImage: `linear-gradient(to bottom, rgba(16, 18, 24, 0.15) 0%, rgba(16, 18, 24, 0.2) 100%), url('/images/hero/image_hero_5.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -248,7 +248,7 @@ export default function AboutUsPage() {
         </Stack>
       </Section>
 
-      <Section bg="white">
+      {/* <Section bg="white">
         <Stack gap={56}>
           <SectionHeader eyebrow="Team" title="People behind" accent="the mission." />
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing="xl">
@@ -287,7 +287,7 @@ export default function AboutUsPage() {
             ))}
           </SimpleGrid>
         </Stack>
-      </Section>
+      </Section> */}
 
       <Section id="faq" bg="default">
         <FAQPanel

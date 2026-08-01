@@ -142,7 +142,16 @@ function AiHowItWorksGrid() {
       image: '/images/venille-ai/image_girl-on-phone.jpg',
       imageAlt: 'Candid photo of a young Nigerian woman smiling while looking at her smartphone',
       icon: (
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <path d="m22 2-7 20-4-9-9-4Z" />
           <path d="M22 2 11 13" />
         </svg>
@@ -158,7 +167,16 @@ function AiHowItWorksGrid() {
       image: '/images/venille-ai/image_girl-group.jpg',
       imageAlt: 'Candid photo of two young West African women smiling and talking together',
       icon: (
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
           <path d="M8 10h8" />
           <path d="M8 14h6" />
@@ -175,7 +193,16 @@ function AiHowItWorksGrid() {
       image: '/images/venille-ai/image_calender.jpg',
       imageAlt: 'Wellness tracking journal and marked cycle calendar page close-up photo',
       icon: (
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <path d="M3 12h3l3-9 4 18 3-12h3" />
         </svg>
       ),
@@ -188,9 +215,19 @@ function AiHowItWorksGrid() {
       description:
         'Need pad replenishments? Skip the line. Order biodegradable Venille banana fiber sanitary pads directly through the app or chatbot interface.',
       image: '/images/product/image_pad_1.jpg',
-      imageAlt: 'High-quality realistic product photograph of eco-friendly sanitary pads on a banana leaf',
+      imageAlt:
+        'High-quality realistic product photograph of eco-friendly sanitary pads on a banana leaf',
       icon: (
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
         </svg>
       ),
@@ -220,9 +257,11 @@ function AiHowItWorksGrid() {
             onMouseLeave={() => setHoveredIndex(null)}
             style={{
               borderRadius: '24px',
-              border: isHovered ? '1px solid rgba(8, 74, 243, 0.25)' : '1px solid rgba(16, 18, 24, 0.08)',
+              border: isHovered
+                ? '1px solid rgba(8, 74, 243, 0.25)'
+                : '1px solid rgba(16, 18, 24, 0.08)',
               background: '#ffffff',
-              boxShadow: isHovered 
+              boxShadow: isHovered
                 ? '0 20px 40px rgba(8, 74, 243, 0.08), 0 1px 3px rgba(8, 74, 243, 0.04)'
                 : '0 8px 30px rgba(16, 18, 24, 0.02)',
               transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
@@ -585,8 +624,6 @@ export default function VenilleAiPage() {
           </Box>
         </SimpleGrid>
       </Section>
-
-
 
       {/* How it Works Section */}
       <JourneySection id="how-it-works" bg="white">

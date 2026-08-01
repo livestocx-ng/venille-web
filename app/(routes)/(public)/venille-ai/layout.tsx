@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { SITE_URL } from '@/core/utilities';
 
 export const metadata: Metadata = {
-  title: 'Venille - Venille AI',
+  title: 'Venille AI — Your Private Digital Health Companion',
   description:
-    'Venille AI helps girls and young women manage menstrual and sexual health via WhatsApp, mobile app, and USSD.',
+    'Venille AI helps girls and young women manage menstrual and sexual health privately via WhatsApp, mobile app, and USSD. Period tracking, symptom logging, multilingual support, and eco-friendly pad ordering — all in one place.',
   keywords: [
     'Venille',
     'Venille AI',
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
     'Sexual Health Education',
   ],
   openGraph: {
-    title: 'Venille - Venille AI',
+    title: 'Venille AI — Your Private Digital Health Companion',
     description:
-      'Venille AI helps girls and young women manage menstrual and sexual health via WhatsApp, mobile app, and USSD.',
+      'Venille AI helps girls and young women manage menstrual and sexual health privately via WhatsApp, mobile app, and USSD. Period tracking, symptom logging, multilingual support, and eco-friendly pad ordering.',
     url: `${SITE_URL}/venille-ai`,
     siteName: 'Venille',
     type: 'website',
@@ -57,9 +57,9 @@ export const metadata: Metadata = {
     card: 'summary',
     site: '@venilleng',
     creator: '@venilleng',
-    title: 'Venille - Venille AI',
+    title: 'Venille AI — Your Private Digital Health Companion',
     description:
-      'Venille AI helps girls and young women manage menstrual and sexual health via WhatsApp, mobile app, and USSD.',
+      'Venille AI helps girls and young women manage menstrual and sexual health privately via WhatsApp, mobile app, and USSD. Period tracking, symptom logging, multilingual support, and eco-friendly pad ordering.',
     images: [
       {
         url: 'https://afritint-media.s3.eu-north-1.amazonaws.com/versions/original/975f9859-8d4f-4750-b8c0-996558021936.jpeg',

@@ -13,7 +13,7 @@ export default function SpotlightPadsSection() {
         // eyebrow="01 · Sanitary pads"
         title="Period care,"
         accent="without compromise."
-        description="Zero leaks, maximum comfort, environmentally friendly. Venille pads use natural, biodegradable materials — replacing the plastic super absorbent polymers found in conventional pads."
+        description="Zero leaks, maximum comfort, environmentally friendly. Venille pads use natural, biodegradable materials, replacing the plastic super absorbent polymers found in conventional pads."
         chips={['Zero Leaks', 'Maximum Comfort', 'Chemical Free', 'Biodegradable']}
         cta={
           <Button component={Link} href="/contact-us" radius="xl" size="md" w="fit-content">
@@ -22,9 +22,9 @@ export default function SpotlightPadsSection() {
         }
         visual={
           <ProductFrame
-            src="/images/hero/IMG_4191.jpg"
-            alt="Venille pads — maximum comfort, environmentally friendly"
-            badge="Made in Nigeria"
+            src="/images/product/image_pad_1.jpg"
+            alt="Venille Ultra Soft sanitary pads — skin friendly and leak protection"
+            badge="Ultra Soft"
             aspectRatio={venilleLayout.imageAspect}
           />
         }

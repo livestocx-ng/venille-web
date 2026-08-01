@@ -10,8 +10,9 @@ import { venilleEase } from '@/core/utilities/motion';
 
 // const HERO_IMAGE = '/images/hero/image_hero.jpg';
 // const HERO_IMAGE = '/images/hero/image_hero_dd.jpg';
-const HERO_IMAGE = '/images/hero/image_hero_5.jpg';
-// const HERO_IMAGE = '/images/hero/image_hero_d.jpg';
+// const HERO_IMAGE = '/images/hero/image_hero_5.jpg';
+const HERO_IMAGE_2 = '/images/product/image_pad_1.jpg';
+const HERO_IMAGE = '/images/hero/image_hero_d.jpg';
 
 const trustItems = [
   '100% Biodegradable',

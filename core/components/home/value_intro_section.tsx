@@ -17,7 +17,7 @@ export default function ValueIntroSection() {
                 color: venilleColors.textMuted,
               }}
             >
-              Venille connects girls and young women with biodegradable sanitary pads, digital health
+              Venille connects girls and young women with eco-friendly sanitary pads, digital health
               tools, and community support designed to make menstrual care feel more accessible,
               dignified, and easier to navigate.
             </Text>
@@ -36,7 +36,7 @@ export default function ValueIntroSection() {
         <Grid.Col span={{ base: 12, md: 6 }}>
           <Image
             src="/images/hero/IMG_4191.jpg"
-            alt="Venille team member presenting biodegradable Venille pads"
+            alt="Venille team member presenting eco-friendly Venille pads"
             radius={venilleLayout.radius.device}
             style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover' }}
           />

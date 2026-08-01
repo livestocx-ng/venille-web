@@ -15,7 +15,7 @@ const HERO_IMAGE_2 = '/images/product/image_pad_1.jpg';
 const HERO_IMAGE = '/images/hero/image_hero_d.jpg';
 
 const trustItems = [
-  '100% Biodegradable',
+  '100% Eco-friendly',
   'Chemical Free',
   '18K+ Lives impacted',
   'Made in Nigeria',
@@ -118,7 +118,7 @@ const Hero = () => (
           >
             Venille sanitary pads are{' '}
             <strong style={{ color: venilleColors.white }}>chemical-free</strong>,{' '}
-            <strong style={{ color: venilleColors.white }}>biodegradable</strong>, and designed to
+            <strong style={{ color: venilleColors.white }}>eco-friendly</strong>, and designed to
             combat period poverty across Africa.
           </Text>
         </motion.div>

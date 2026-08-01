@@ -3,15 +3,15 @@ export const howItWorksSteps = [
     step: '01',
     title: 'Period care, without compromise',
     description:
-      'Zero leaks, maximum comfort, environmentally friendly. Venille pads use natural, biodegradable materials — replacing the plastic super absorbent polymers found in conventional pads.',
+      'Zero leaks, maximum comfort, environmentally friendly. Venille pads use natural, eco-friendly materials — replacing the plastic super absorbent polymers found in conventional pads.',
     image: '/images/hero/IMG_4191.jpg',
-    imageAlt: 'Venille team member with biodegradable Venille pads',
+    imageAlt: 'Venille team member with eco-friendly Venille pads',
   },
   {
     step: '02',
     title: 'Sustainable menstrual care that saves the planet',
     description:
-      'Venille replaces plastic super absorbent polymers with natural, biodegradable materials — without sacrificing comfort or reliability.',
+      'Venille replaces plastic super absorbent polymers with natural, eco-friendly materials — without sacrificing comfort or reliability.',
     image: '/images/product/image_pad_2.jpg',
     imageAlt: 'Venille pad — chemical free and eco-friendly',
   },

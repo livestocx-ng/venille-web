@@ -12,7 +12,7 @@ export default function HowItWorksSection() {
           eyebrow="How it works"
           title="Getting started should"
           accent="feel simple."
-          description="From biodegradable pads to digital health support, Venille is designed to make each step clear, supportive, and easy to follow."
+          description="From eco-friendly pads to digital health support, Venille is designed to make each step clear, supportive, and easy to follow."
           action={{ href: '/contact-us', label: 'Get started' }}
         />
         <StepCarousel steps={howItWorksSteps} />

@@ -97,7 +97,7 @@ export default function AboutUsPage() {
                     maxWidth: 640,
                   }}
                 >
-                  We design biodegradable menstrual health products and digital support that meet
+                  We design eco-friendly menstrual health products and digital support that meet
                   girls and women where they are.
                 </Text>
               </motion.div>
@@ -165,7 +165,7 @@ export default function AboutUsPage() {
                         100%
                       </Text>
                       <Text size="xs" style={{ color: 'rgba(255, 255, 255, 0.7)', fontWeight: 600 }}>
-                        Biodegradable
+                        Eco-friendly
                       </Text>
                     </div>
                     <div>
@@ -196,8 +196,8 @@ export default function AboutUsPage() {
             eyebrow="Mission"
             title="Affordable pads,"
             accent="combating period poverty."
-            description="Venille creates biodegradable sanitary pads from natural materials — chemical-free, comfortable, and designed to tackle period poverty while protecting the planet."
-            chips={['Biodegradable', 'Chemical-free', 'Comfort-first', 'Made for Nigeria']}
+            description="Venille creates eco-friendly sanitary pads from natural materials — chemical-free, comfortable, and designed to tackle period poverty while protecting the planet."
+            chips={['Eco-friendly', 'Chemical-free', 'Comfort-first', 'Made for Nigeria']}
             visual={
               <Box
                 className="mochi-card"

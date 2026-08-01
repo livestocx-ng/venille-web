@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     'Banana Stem Fiber',
     'Plant-based Period Care',
     'Eco-friendly Pads',
-    'Biodegradable Pads',
+    'Eco-friendly Pads',
     'Menstrual Health',
     'Period Poverty',
   ],

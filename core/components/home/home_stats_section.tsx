@@ -12,7 +12,7 @@ export default function HomeStatsSection() {
     },
     {
       value: '100%',
-      label: 'Biodegradable materials — zero harmful chemicals',
+      label: 'Eco-friendly materials — zero harmful chemicals',
     },
     {
       value: (

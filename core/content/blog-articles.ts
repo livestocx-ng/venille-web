@@ -19,7 +19,7 @@ export const blogArticles: BlogArticle[] = [
     publishedAt: '2023-08-15',
     paragraphs: [
       'Venille has been recognized by Because International through the Summer Impact Competition for our work delivering sustainable menstrual health solutions to underserved communities.',
-      'The award celebrates innovations that create measurable social and environmental impact. Venille\'s biodegradable sanitary pads address both period poverty and plastic pollution — two interconnected crises affecting women and the planet.',
+      'The award celebrates innovations that create measurable social and environmental impact. Venille\'s eco-friendly sanitary pads address both period poverty and plastic pollution — two interconnected crises affecting women and the planet.',
       'This recognition fuels our commitment to scaling affordable, chemical-free menstrual products while expanding community outreach across Nigeria.',
     ],
     externalLink: 'https://becauseinternational.org/blogs/stories/venille-because-accelerator',
@@ -47,7 +47,7 @@ export const blogArticles: BlogArticle[] = [
     publishedAt: '2022-12-10',
     paragraphs: [
       'Venille received the 2022 Kukah Prize Young Innovators Award, honouring young Nigerians creating solutions to pressing social challenges.',
-      'The award recognized our founders\' dedication to tackling period poverty through affordable, biodegradable sanitary pads and community education programmes.',
+      'The award recognized our founders\' dedication to tackling period poverty through affordable, eco-friendly sanitary pads and community education programmes.',
       'We remain committed to the values the Kukah Prize represents: integrity, innovation, and service to community.',
     ],
     externalLink: 'https://nannews.ng/2022/09/01/2022-kukah-young-innovators-award-teen-ceo-wins-n2m-grand-prize/',
@@ -76,7 +76,7 @@ export const blogArticles: BlogArticle[] = [
   //   paragraphs: [
   //     'Venille is proud to announce its recognition in the 2024 Youth4Climate Call for Solutions for Sustainable Consumption and Production. This prestigious award highlights our mission to tackle period poverty and plastic pollution with eco-friendly sanitary pads made from upcycled agricultural waste. This milestone demonstrates the potential of youth-led innovation in addressing global challenges.',
   //     'Despite being invited to the One Planet Network Forum in Brazil and the Youth4Climate Flagship Event in Turin, unforeseen circumstances prevented my attendance at both events. However, the honor itself underscores the importance and relevance of Venille\'s work. Through this recognition, we are inspired to continue creating sustainable solutions that empower underserved communities and protect our environment.',
-  //     'This award not only reflects the progress Venille has made but also serves as motivation to scale our operations and deepen our impact. Our biodegradable sanitary pads have already improved the lives of women and girls, allowing them to manage their periods with dignity while reducing plastic waste. By addressing critical issues such as access to menstrual hygiene and environmental sustainability, Venille stands at the forefront of innovation for social good.',
+  //     'This award not only reflects the progress Venille has made but also serves as motivation to scale our operations and deepen our impact. Our eco-friendly sanitary pads have already improved the lives of women and girls, allowing them to manage their periods with dignity while reducing plastic waste. By addressing critical issues such as access to menstrual hygiene and environmental sustainability, Venille stands at the forefront of innovation for social good.',
   //     'Being part of the global Youth4Climate network is an opportunity to amplify Venille\'s mission. Although unable to participate in person, the connection to other young changemakers and thought leaders inspires us to push forward with greater determination. This journey is a reminder that impactful solutions are built through resilience, creativity, and the collective power of community.',
   //     'As we celebrate this milestone, we express heartfelt gratitude to the Youth4Climate team, our supporters, and the communities we serve. This recognition reaffirms our belief in the potential of young entrepreneurs to drive meaningful change. Venille will continue to innovate and advocate for sustainable practices, ensuring a future where everyone can thrive in harmony with the planet.',
   //     'Thank you for walking with us on this journey. Together, we can make a difference! Stay tuned as Venille embarks on new initiatives to empower, innovate, and inspire.',
@@ -90,7 +90,7 @@ export const blogArticles: BlogArticle[] = [
     readTime: '6 min read',
     publishedAt: '2024-04-07',
     paragraphs: [
-      'On World Health Day, the Venille team visited Jebu Miango to deliver menstrual health education, hygiene workshops, and distributions of our eco-friendly biodegradable pads.',
+      'On World Health Day, the Venille team visited Jebu Miango to deliver menstrual health education, hygiene workshops, and distributions of our eco-friendly pads.',
       'Many women in rural communities lack access to affordable, safe menstrual products. Our outreach provided practical knowledge about hygiene, health, and sustainable product choices.',
       'Community programmes like this are central to Venille\'s mission: we don\'t just sell pads — we build dignity, awareness, and long-term health outcomes for women and girls.',
     ],

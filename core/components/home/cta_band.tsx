@@ -40,7 +40,7 @@ export default function CtaBandSection() {
               fontSize: venilleTypography.body,
             }}
           >
-            Order biodegradable sanitary pads or reach out about wholesale, retail, and community
+            Order eco-friendly sanitary pads or reach out about wholesale, retail, and community
             partnerships.
           </Text>
           <Group gap="md" justify="center">
@@ -67,7 +67,7 @@ export default function CtaBandSection() {
             </Button>
           </Group>
           <Text size="xs" c="rgba(255,255,255,0.5)">
-            WhatsApp orders · Nationwide delivery · 100% biodegradable
+            WhatsApp orders · Nationwide delivery · 100% eco-friendly
           </Text>
         </Stack>
       </Box>

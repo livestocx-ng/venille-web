@@ -213,7 +213,7 @@ function AiHowItWorksGrid() {
       step: '04',
       title: 'Order Premium Eco-Pads',
       description:
-        'Need pad replenishments? Skip the line. Order biodegradable Venille banana fiber sanitary pads directly through the app or chatbot interface.',
+        'Need pad replenishments? Skip the line. Order eco-friendly Venille banana fiber sanitary pads directly through the app or chatbot interface.',
       image: '/images/product/image_pad_1.jpg',
       imageAlt:
         'High-quality realistic product photograph of eco-friendly sanitary pads on a banana leaf',

@@ -28,7 +28,8 @@ export const blogPosts = [
   {
     slug: 'because-international-summer-impact-competition-prize',
     title: 'Because International Summer Impact Competition Prize',
-    excerpt: 'Venille recognized for creating sustainable impact through innovative menstrual health solutions.',
+    excerpt:
+      'Venille recognized for creating sustainable impact through innovative menstrual health solutions.',
     category: 'Award',
     readTime: '4 min read',
     externalLink: 'https://becauseinternational.org/blogs/stories/venille-because-accelerator',
@@ -39,7 +40,8 @@ export const blogPosts = [
     excerpt: 'Venille wins recognition for driving climate-positive menstrual health innovation.',
     category: 'Award',
     readTime: '4 min read',
-    externalLink: 'https://www.britishcouncil.org/climate-connection/be-inspired/destination-zero/Esther',
+    externalLink:
+      'https://www.britishcouncil.org/climate-connection/be-inspired/destination-zero/Esther',
   },
   {
     slug: '2022-kukah-prize-young-innovators-award',
@@ -47,12 +49,14 @@ export const blogPosts = [
     excerpt: 'Honoured for youth-led innovation in sustainable menstrual hygiene.',
     category: 'Award',
     readTime: '5 min read',
-    externalLink: 'https://nannews.ng/2022/09/01/2022-kukah-young-innovators-award-teen-ceo-wins-n2m-grand-prize/',
+    externalLink:
+      'https://nannews.ng/2022/09/01/2022-kukah-young-innovators-award-teen-ceo-wins-n2m-grand-prize/',
   },
   {
     slug: 'anzisha-fellowship-2023',
     title: 'Anzisha Fellowship 2023',
-    excerpt: 'Venille joins Africa\'s premier fellowship for young entrepreneurs creating lasting change.',
+    excerpt:
+      "Venille joins Africa's premier fellowship for young entrepreneurs creating lasting change.",
     category: 'Fellowship',
     readTime: '4 min read',
     externalLink: 'https://anzisha.org/fellows/esther-olalude/',
@@ -60,42 +64,49 @@ export const blogPosts = [
   {
     slug: 'youth4climate-award',
     title: 'Venille Honored with the Youth4Climate Award: A Testament to Sustainable Innovation',
-    excerpt: 'Venille is proud to announce its recognition in the 2024 Youth4Climate Call for Solutions for Sustainable Consumption and Production.',
+    excerpt:
+      'Venille is proud to announce its recognition in the 2024 Youth4Climate Call for Solutions for Sustainable Consumption and Production.',
     category: 'Award',
     readTime: '4 min read',
   },
   {
     slug: 'empowering-women-in-jebu-miango',
-    title: 'Empowering Women in Jebu Miango: Venille\'s Outreach for World Health Day',
-    excerpt: 'Community outreach bringing menstrual health education and eco-friendly pads to women in Jebu Miango.',
+    title: "Empowering Women in Jebu Miango: Venille's Outreach for World Health Day",
+    excerpt:
+      'Community outreach bringing menstrual health education and eco-friendly pads to women in Jebu Miango.',
     category: 'Community',
     readTime: '6 min read',
   },
   {
     slug: 'undp-selection',
     title: 'UNDP Selection',
-    excerpt: 'Venille selected by the United Nations Development Programme for sustainable development impact.',
+    excerpt:
+      'Venille selected by the United Nations Development Programme for sustainable development impact.',
     category: 'Partnership',
     readTime: '4 min read',
   },
   {
     slug: '776-fellowship',
-    title: 'Venille Awarded $100,000 Fellowship by 776 Foundation to Build a Future Where Periods Don’t Pollute',
-    excerpt: 'We are proud to announce that Venille Ltd has been selected for the 776 Foundation Fellowship, backed by Alexis Ohanian, co-founder of Reddit, and awarded a $100,000 grant.',
+    title:
+      'Venille Awarded $100,000 Fellowship by 776 Foundation to Build a Future Where Periods Don’t Pollute',
+    excerpt:
+      'We are proud to announce that Venille Ltd has been selected for the 776 Foundation Fellowship, backed by Alexis Ohanian, co-founder of Reddit, and awarded a $100,000 grant.',
     category: 'Fellowship',
     readTime: '4 min read',
   },
   {
     slug: 'nysc-pageantry-sponsorship',
     title: 'NYSC Pageantry Sponsorship',
-    excerpt: 'Venille sponsors NYSC pageantry to promote menstrual health awareness among young women.',
+    excerpt:
+      'Venille sponsors NYSC pageantry to promote menstrual health awareness among young women.',
     category: 'Community',
     readTime: '4 min read',
   },
   {
     slug: 'venille-national-conversation-menstrual-health',
-    title: 'Venille Joins National Conversation on Menstrual Health and Women\'s Empowerment',
-    excerpt: 'Contributing to Nigeria\'s national dialogue on period poverty, hygiene access, and women\'s empowerment.',
+    title: "Venille Joins National Conversation on Menstrual Health and Women's Empowerment",
+    excerpt:
+      "Contributing to Nigeria's national dialogue on period poverty, hygiene access, and women's empowerment.",
     category: 'Impact',
     readTime: '5 min read',
   },
@@ -105,7 +116,7 @@ export const platformFaqs = [
   {
     value: 'What are Venille sanitary pads made of?',
     description:
-      'Venille sanitary pads are made from natural, biodegradable materials designed to be chemical-free and environmentally friendly, replacing the plastic super absorbent polymers (SAP) used in conventional pads.',
+      'Venille sanitary pads are made from natural, eco-friendly materials designed to be chemical-free and environmentally friendly, replacing the plastic super absorbent polymers (SAP) used in conventional pads.',
   },
   {
     value: 'Are Venille pads chemical-free?',
@@ -115,7 +126,7 @@ export const platformFaqs = [
   {
     value: 'How environmentally friendly are Venille pads?',
     description:
-      'Conventional sanitary products contribute significantly to plastic pollution. Venille pads are biodegradable and designed to reduce environmental harm from menstrual product waste.',
+      'Conventional sanitary products contribute significantly to plastic pollution. Venille pads are eco-friendly and designed to reduce environmental harm from menstrual product waste.',
   },
   {
     value: 'What is Venille AI?',
@@ -125,7 +136,7 @@ export const platformFaqs = [
   {
     value: 'How do I order Venille pads?',
     description:
-      'You can order Venille biodegradable pads through our contact page or WhatsApp. We are working to expand wholesale, retail, and online store availability across Nigeria.',
+      'You can order Venille eco-friendly pads through our contact page or WhatsApp. We are working to expand wholesale, retail, and online store availability across Nigeria.',
   },
   {
     value: 'How do you support local communities?',
@@ -150,7 +161,7 @@ export const platformFeatures = [
   {
     title: 'Maximum Comfort',
     description:
-      'Many sanitary products are too short, too thick, or cause rash. Venille pads eliminate these discomforts, you won\'t even know you\'re wearing a pad.',
+      "Many sanitary products are too short, too thick, or cause rash. Venille pads eliminate these discomforts, you won't even know you're wearing a pad.",
     icon: IconUsers,
   },
 ];
@@ -165,7 +176,8 @@ export const unicefStats = [
   {
     value: 46,
     suffix: '%',
-    label: 'of people in developing countries like Nigeria do not have adequate handwashing facilities at home, making period hygiene more difficult for women and young girls.',
+    label:
+      'of people in developing countries like Nigeria do not have adequate handwashing facilities at home, making period hygiene more difficult for women and young girls.',
     decimals: 0,
   },
 ];
@@ -173,13 +185,12 @@ export const unicefStats = [
 export const teamMembers = [
   {
     name: 'Esther Oluwabunmi Olalude',
-    role: 'Co-Founder',
-    bio: 'Esther leads Venille\'s mission to deliver sustainable menstrual health solutions and digital health innovation for girls and young women across Nigeria.',
+    role: 'CEO',
+    bio: "Esther leads Venille's mission to deliver sustainable menstrual health solutions and digital health innovation for girls and young women across Nigeria.",
     extendedBio:
-      'As co-founder of Venille, Esther represents the company at international forums including the U.S. Consulate General Lagos Speaker Program on AI for Business. She champions accessible menstrual health and women\'s empowerment.',
-    quote:
-      'We are solution-based, focused on tackling period poverty and saving the planet.',
-    highlights: ['Co-Founder, Venille', 'AI for Business Speaker, U.S. Consulate Lagos'],
+      "As CEO of Venille, Esther represents the company at international forums including the U.S. Consulate General Lagos Speaker Program on AI for Business. She champions accessible menstrual health and women's empowerment.",
+    quote: 'We are solution-based, focused on tackling period poverty and saving the planet.',
+    highlights: ['CEO, Venille', 'AI for Business Speaker, U.S. Consulate Lagos'],
     credentials: ['Venille AI', 'Menstrual Health Advocacy'],
     linkedin: '',
     image: '/images/team/esther.jpg',
@@ -202,14 +213,14 @@ export const teamMembers = [
 export const appFeatures = [
   {
     id: 1,
-    feature: 'Biodegradable Materials',
+    feature: 'Eco-friendly Materials',
     image: '/images/product/biodegradable_materials_ai.png',
     custom: {
       text: 'Uses synthetic plastic SAP cores (take 500 years to degrade)',
       positive: false,
     },
     livestocx: {
-      text: 'Uses biodegradable natural materials',
+      text: 'Uses eco-friendly natural materials',
       positive: true,
     },
   },
@@ -242,19 +253,63 @@ export const appFeatures = [
 ];
 
 export const Partners: Partner[] = [
-  { name: 'Mastercard', image: '/images/sponsors/mastercard.png', detail: 'Financial inclusion and innovation partner' },
-  { name: '776 Foundation', image: '/images/sponsors/776_foundation.png', detail: 'Supporting climate tech and green solutions' },
-  { name: 'UNDP', image: '/images/sponsors/undp.jpeg', detail: 'United Nations Development Programme' },
-  { name: 'Youth4Climate', image: '/images/sponsors/youth for climate.png', detail: 'Youth-led climate action recognition' },
-  { name: 'The World Around', image: '/images/sponsors/the world around.png', detail: 'Global design and social impact partner' },
-  { name: 'African Leadership Academy', image: '/images/sponsors/africa leadership academy.jpg', detail: 'African leadership development partner' },
-  { name: 'British Council', image: '/images/sponsors/british_council.png', detail: 'International education and development' },
-  { name: 'Anzisha', image: '/images/sponsors/anzisha.png', detail: 'Anzisha Fellowship for young African entrepreneurs' },
-  { name: 'Because International', image: '/images/sponsors/because.png', detail: 'Summer Impact Competition partner' },
-  { name: 'Kukah Prize', image: '/images/sponsors/kukah.jpg', detail: 'Young Innovators Award recognition' },
+  {
+    name: 'Mastercard',
+    image: '/images/sponsors/mastercard.png',
+    detail: 'Financial inclusion and innovation partner',
+  },
+  {
+    name: '776 Foundation',
+    image: '/images/sponsors/776_foundation.png',
+    detail: 'Supporting climate tech and green solutions',
+  },
+  {
+    name: 'UNDP',
+    image: '/images/sponsors/undp.jpeg',
+    detail: 'United Nations Development Programme',
+  },
+  {
+    name: 'Youth4Climate',
+    image: '/images/sponsors/youth for climate.png',
+    detail: 'Youth-led climate action recognition',
+  },
+  {
+    name: 'The World Around',
+    image: '/images/sponsors/the world around.png',
+    detail: 'Global design and social impact partner',
+  },
+  {
+    name: 'African Leadership Academy',
+    image: '/images/sponsors/africa leadership academy.jpg',
+    detail: 'African leadership development partner',
+  },
+  {
+    name: 'British Council',
+    image: '/images/sponsors/british_council.png',
+    detail: 'International education and development',
+  },
+  {
+    name: 'Anzisha',
+    image: '/images/sponsors/anzisha.png',
+    detail: 'Anzisha Fellowship for young African entrepreneurs',
+  },
+  {
+    name: 'Because International',
+    image: '/images/sponsors/because.png',
+    detail: 'Summer Impact Competition partner',
+  },
+  {
+    name: 'Kukah Prize',
+    image: '/images/sponsors/kukah.jpg',
+    detail: 'Young Innovators Award recognition',
+  },
   { name: 'Mamador', image: '/images/sponsors/mamador.jpg', detail: 'Brand partnership' },
   { name: 'MTN', image: '/images/sponsors/mtn.jpg', detail: 'Telecommunications and USSD partner' },
-  { name: 'Young Climate Prize', image: '/images/sponsors/young climate prize.png', detail: 'Young Climate Prize recognition' },
+  {
+    name: 'Young Climate Prize',
+    image: '/images/sponsors/young climate prize.png',
+    detail: 'Young Climate Prize recognition',
+  },
 ];
 
 export const Sponsors = Partners;

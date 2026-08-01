@@ -24,7 +24,7 @@ export default function Page() {
 
   const paragraphs = [
     'Big news! We’re thrilled to announce that Venille Ltd has been selected as one of the global winners of the Youth4Climate Call for Solutions 2024, powered by the United Nations Development Programme (UNDP) and the Italian Ministry for the Environment and Energy Security.',
-    'Venille was awarded a $30,000 grant to scale our impact-driven mission of ending period poverty and fighting plastic pollution by producing affordable, biodegradable sanitary pads from agricultural waste right here in Nigeria.',
+    'Venille was awarded a $30,000 grant to scale our impact-driven mission of ending period poverty and fighting plastic pollution by producing affordable, eco-friendly sanitary pads from agricultural waste right here in Nigeria.',
     'The Youth4Climate initiative seeks to support youth-led solutions that tackle the climate crisis through innovation, inclusion, and community impact. Venille was selected as one of only a handful of ventures worldwide for its unique approach to sustainable menstrual health and circular production.',
     'This support from UNDP enables us to move faster, dream bigger, and serve thousands more girls who deserve access to safe, affordable menstrual products without harming the planet.',
     'We’re incredibly proud to represent Nigeria on the global stage and lead the charge toward sustainable menstrual health.',

@@ -21,6 +21,7 @@ const MUTED = 'rgba(73, 75, 81, 0.85)';
 type PolicyBlock = { type: 'paragraph'; text: string } | { type: 'list'; items: string[] };
 
 type PolicySubsection = {
+  id?: string;
   title: string;
   blocks: PolicyBlock[];
 };
@@ -84,7 +85,7 @@ const policySections: PolicySection[] = [
           },
           {
             type: 'paragraph',
-            text: 'Cookies and Tracking Technologies: We use cookies, web beacons, pixel tags, and similar tracking technologies to recognize you, remember your preferences, and track engagement on the Platform. This may include first-party cookies we place and third-party cookies (e.g., analytics, marketing).',
+            text: 'Cookies and Tracking Technologies: We use cookies, web beacons, and similar tracking technologies to recognize you and remember preferences. This may include first-party cookies for core authentication and privacy-preserving third-party analytics on our website. We do not use third-party tracking or advertising cookies for in-app health tracking.',
           },
         ],
       },
@@ -168,7 +169,7 @@ const policySections: PolicySection[] = [
       },
       {
         type: 'paragraph',
-        text: 'Third-Party Cookies: We allow third-party service providers (e.g., Google Analytics, social media plugins, advertising partners) to place cookies on your device to analyze and measure usage, serve targeted advertisements, and understand user behavior. These third parties may collect information over time about your online activities across different websites and services.',
+        text: 'Third-Party Cookies: Venille AI does not sell, rent, or share user personal health data, menstrual cycle records, or symptom logs with any third-party advertising networks, data brokers, or marketing platforms for advertising or commercial tracking purposes.',
       },
       {
         type: 'paragraph',
@@ -213,7 +214,7 @@ const policySections: PolicySection[] = [
     blocks: [
       {
         type: 'paragraph',
-        text: 'Venille Services are not intended for individuals under the age of 18. We do not knowingly collect or solicit personal data from minors under 18. If we become aware that we have inadvertently collected data from a child under 18, we will promptly delete such data from our records. If you are a parent or guardian and believe that your child has provided us with personal data, please contact us to request deletion.',
+        text: 'Venille Services are not intended for children under the age of 13. We do not knowingly collect or solicit personal data from children under 13 years of age (or the minimum age required by applicable law in your jurisdiction). If we become aware that we have inadvertently collected personal data from a child under 13 without verifiable parental consent, we will promptly delete such data from our records. If you are a parent or guardian and believe that your child under 13 has provided us with personal data, please contact us at privacy@venille.ai or info@venille.com.ng to request immediate deletion.',
       },
     ],
   },
@@ -223,7 +224,7 @@ const policySections: PolicySection[] = [
     title: 'Your Rights and Choices',
     subsections: [
       {
-        title: '10.1. Access, Correction, and Deletion',
+        title: '10.1. Access, Correction, and Deletion Rights',
         blocks: [
           {
             type: 'paragraph',
@@ -239,12 +240,33 @@ const policySections: PolicySection[] = [
           },
           {
             type: 'paragraph',
-            text: 'To exercise these rights, contact us as described in Section 14 below. We may need to verify your identity before fulfilling such requests.',
+            text: 'To exercise general access or correction rights, contact us as described in Section 14 below. For specific step-by-step instructions on deleting your account and all associated data, please refer to Section 10.2 below.',
           },
         ],
       },
       {
-        title: '10.2. Data Portability and Restriction',
+        id: 'account-deletion',
+        title: '10.2. How to Delete Your Account and Data',
+        blocks: [
+          {
+            type: 'paragraph',
+            text: 'In compliance with mobile platform policies (including Google Play Account Deletion requirements) and global data protection laws, Venille provides simple and direct methods for you to permanently delete your account and all associated personal and health records:',
+          },
+          {
+            type: 'list',
+            items: [
+              'In-App Account Deletion (Direct): If you use the Venille mobile app, you can delete your account and all associated data directly within the app by navigating to Settings > Profile > Delete Account and confirming your request. This immediately deactivates your account and initiates permanent data removal without requiring an email request.',
+              'Web / External Deletion Request: If you cannot access the mobile application, registered via web, or prefer to submit a deletion request externally without reinstalling the app, email privacy@venille.ai (or info@venille.com.ng) with the subject line "Account Deletion Request" from the email address registered with your Venille account.',
+            ],
+          },
+          {
+            type: 'paragraph',
+            text: 'Scope of Deletion and Retention Timeline: Once an account deletion request is initiated or verified, all your account profile details, menstrual cycle tracking history, symptom logs, biometrics, questionnaire responses, notes, and AI interaction history will be permanently and irreversibly purged from our active databases and backup systems within 30 days. Certain minimal non-identifiable transaction or regulatory compliance records may be retained only where strictly mandated by applicable laws.',
+          },
+        ],
+      },
+      {
+        title: '10.3. Data Portability and Restriction',
         blocks: [
           {
             type: 'paragraph',
@@ -253,7 +275,7 @@ const policySections: PolicySection[] = [
         ],
       },
       {
-        title: '10.3. Opt-Out of Marketing Communications',
+        title: '10.4. Opt-Out of Marketing Communications',
         blocks: [
           {
             type: 'paragraph',
@@ -354,8 +376,7 @@ const PrivacyPolicyPage = () => {
                 Privacy Policy
               </Title>
               <Text size="sm" c={MUTED}>
-                Effective as published on the Venille Platform. Last updated to reflect current
-                practices.
+                Effective Date: October 24, 2024 | Last Updated: October 2024
               </Text>
             </Stack>
 
@@ -387,7 +408,13 @@ const PrivacyPolicyPage = () => {
                     ))}
 
                     {section.subsections?.map((sub) => (
-                      <Stack key={sub.title} gap="sm" mt="sm">
+                      <Stack
+                        key={sub.title}
+                        id={sub.id}
+                        gap="sm"
+                        mt="sm"
+                        style={sub.id ? { scrollMarginTop: 100 } : undefined}
+                      >
                         <Text fw={700} size="md" c={INK}>
                           {sub.title}
                         </Text>
@@ -406,17 +433,35 @@ const PrivacyPolicyPage = () => {
                           border: `1px solid ${SLATE_BORDER}`,
                         }}
                       >
-                        <Group gap="sm" wrap="nowrap">
-                          <IconMail size={20} color={SLATE} style={{ flexShrink: 0 }} />
-                          <Stack gap={2}>
-                            <Text size="sm" fw={600} c={MUTED}>
-                              Email us
-                            </Text>
-                            <Anchor href="mailto:info@venille.com.ng" size="md" fw={700} c={SLATE}>
-                              info@venille.com.ng
-                            </Anchor>
-                          </Stack>
-                        </Group>
+                        <Stack gap="md">
+                          <Group gap="sm" wrap="nowrap">
+                            <IconMail size={20} color={SLATE} style={{ flexShrink: 0 }} />
+                            <Stack gap={2}>
+                              <Text size="sm" fw={600} c={MUTED}>
+                                Privacy & Account Deletion Requests
+                              </Text>
+                              <Anchor href="mailto:privacy@venille.ai" size="md" fw={700} c={SLATE}>
+                                privacy@venille.ai
+                              </Anchor>
+                            </Stack>
+                          </Group>
+                          <Group gap="sm" wrap="nowrap">
+                            <IconMail size={20} color={SLATE} style={{ flexShrink: 0 }} />
+                            <Stack gap={2}>
+                              <Text size="sm" fw={600} c={MUTED}>
+                                General Inquiries
+                              </Text>
+                              <Anchor
+                                href="mailto:info@venille.com.ng"
+                                size="md"
+                                fw={700}
+                                c={SLATE}
+                              >
+                                info@venille.com.ng
+                              </Anchor>
+                            </Stack>
+                          </Group>
+                        </Stack>
                       </Box>
                     )}
                   </Stack>

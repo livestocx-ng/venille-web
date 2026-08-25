@@ -314,66 +314,6 @@ export default function UsConsulatePage() {
                 had the incredible honour of crowning the winner at the end of the ceremony. The
                 excitement and gratitude from the participants and attendees was very heart-warming.
               </Text>
-
-              {/* Quick Details Box */}
-              {/* <Box
-              style={{
-                backgroundColor: 'rgba(8, 74, 243, 0.03)',
-                border: `1px solid rgba(8, 74, 243, 0.06)`,
-                borderRadius: '12px',
-                padding: '16px',
-                margin: '12px 0',
-              }}
-            >
-              <Title order={5} c="#101218" mb="xs" fw={700}>
-                Event Quick Details
-              </Title>
-              <Stack gap="xs">
-                <Group gap="sm" wrap="nowrap" align="flex-start">
-                  <IconCalendar size={16} color={venilleColors.primary} style={{ marginTop: 2 }} />
-                  <Box>
-                    <Text size="xs" fw={700} c="#101218">Date</Text>
-                    <Text size="xs" c={venilleColors.textMuted}>Wednesday, February 25, 2026</Text>
-                  </Box>
-                </Group>
-                <Group gap="sm" wrap="nowrap" align="flex-start">
-                  <IconMapPin size={16} color={venilleColors.primary} style={{ marginTop: 2 }} />
-                  <Box>
-                    <Text size="xs" fw={700} c="#101218">Venue</Text>
-                    <Text size="xs" c={venilleColors.textMuted}>21st Century Technologies, Lekki Phase 1, Lagos</Text>
-                  </Box>
-                </Group>
-                <Group gap="sm" wrap="nowrap" align="flex-start">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={venilleColors.primary} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginTop: 2 }}>
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                    <circle cx="9" cy="7" r="4" />
-                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                  </svg>
-                  <Box>
-                    <Text size="xs" fw={700} c="#101218">Distinguished Panelists</Text>
-                    <Text size="xs" c={venilleColors.textMuted}>Dr. Omoju Miller (CEO, Fimio Inc.), NITDA, and Amazon Solutions Architects</Text>
-                  </Box>
-                </Group>
-              </Stack>
-            </Box> */}
-
-              {/* <Divider style={{ margin: '12px 0', opacity: 0.6 }} /> */}
-
-              {/* Share or CTA section */}
-              {/* <Group justify="space-between" align="center" style={{ width: '100%' }} mt="xs">
-              <Box>
-                <Text size="xs" fw={700} c={venilleColors.textMuted} tt="uppercase" style={{ letterSpacing: '0.5px' }}>
-                  Next in Tech:
-                </Text>
-                <Text size="sm" fw={700} c={venilleColors.primary} component={Link} href="/venille-ai" style={{ textDecoration: 'none' }}>
-                  Explore Venille AI Companion &rarr;
-                </Text>
-              </Box>
-              <Button component={Link} href="/stories" variant="outline" radius="xl" size="xs">
-                Read More Articles
-              </Button>
-            </Group> */}
             </Stack>
           </Container>
         </Stack>

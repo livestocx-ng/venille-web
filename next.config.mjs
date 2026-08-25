@@ -15,7 +15,6 @@ export default withBundleAnalyzer({
   async redirects() {
     return [
       { source: '/our-story', destination: '/about-us', permanent: true },
-      { source: '/smart-pad', destination: '/venille-ai', permanent: true },
       {
         source: '/blog/girlified-women-and-girls-engagement',
         destination: '/stories/empowering-women-in-jebu-miango',

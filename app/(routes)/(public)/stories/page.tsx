@@ -329,7 +329,8 @@ export default function BlogPage() {
           description="Follow Venille’s work in product innovation, community outreach, and partnerships."
           primaryLabel="Contact Venille"
           secondaryLabel="Explore Venille AI"
-          secondaryHref="/venille-ai"
+          secondaryHref="https://ai.venille.com.ng"
+          // secondaryTarget="_blank"
         />
       </Section>
     </Box>

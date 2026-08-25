@@ -122,7 +122,8 @@ export default function AboutUsPage() {
                   <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
                     <Button
                       component={Link}
-                      href="/venille-ai"
+                      href="https://ai.venille.com.ng"
+                      target="_blank"
                       variant="white"
                       color="primary"
                       radius="xl"

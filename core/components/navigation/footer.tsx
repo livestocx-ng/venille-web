@@ -20,7 +20,7 @@ const socialLinks = [
 
 const productLinks = [
   { href: '/', label: 'Home' },
-  { href: '/venille-ai', label: 'Venille AI' },
+  { href: 'https://ai.venille.com.ng', label: 'Venille AI', target: '_blank' },
   { href: '/us-consulate', label: 'US Consulate' },
   { href: '/stories', label: 'Stories' },
 ];

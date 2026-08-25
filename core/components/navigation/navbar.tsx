@@ -55,6 +55,10 @@ export function Navbar() {
   const navLinkClass = (href: string) =>
     `${classes.navLink} ${getNavClass(isNavLinkActive(pathname, href), navOnHero)}`;
 
+  // Drawer is always on a white panel — never use hero light-link styles there
+  const drawerLinkClass = (href: string) =>
+    `${classes.navLink} ${getNavClass(isNavLinkActive(pathname, href), false)}`;
+
   return (
     <>
       <Box
@@ -230,7 +234,7 @@ export function Navbar() {
                 target={link.target || undefined}
                 rel={link.target === '_blank' ? 'noopener noreferrer' : undefined}
                 onClick={toggle}
-                className={navLinkClass(link.link)}
+                className={drawerLinkClass(link.link)}
                 style={{ display: 'block', padding: '12px 8px', fontSize: 16 }}
               >
                 {link.label}
@@ -239,7 +243,7 @@ export function Navbar() {
             <Box>
               <UnstyledButton
                 onClick={toggleBlog}
-                className={navLinkClass('/stories')}
+                className={drawerLinkClass('/stories')}
                 style={{
                   width: '100%',
                   display: 'flex',
@@ -247,7 +251,6 @@ export function Navbar() {
                   justifyContent: 'space-between',
                   padding: '12px 8px',
                   fontSize: 16,
-                  color: 'inherit',
                 }}
               >
                 Blog
@@ -272,8 +275,8 @@ export function Navbar() {
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={toggle}
-                            className="benchling-link"
-                            style={{ textDecoration: 'none', display: 'block', padding: '4px 0' }}
+                            className={drawerLinkClass(`/stories/${post.slug}`)}
+                            style={{ display: 'block', padding: '4px 0' }}
                           >
                             {post.title}
                           </a>
@@ -282,7 +285,7 @@ export function Navbar() {
                             key={post.slug}
                             href={`/stories/${post.slug}`}
                             onClick={toggle}
-                            className="benchling-link"
+                            className={drawerLinkClass(`/stories/${post.slug}`)}
                             style={{ display: 'block', padding: '4px 0' }}
                           >
                             {post.title}
@@ -294,7 +297,7 @@ export function Navbar() {
                   <Link
                     href="/stories"
                     onClick={toggle}
-                    className="benchling-link"
+                    className={drawerLinkClass('/stories')}
                     style={{ paddingTop: '4px' }}
                   >
                     View all articles
@@ -306,7 +309,7 @@ export function Navbar() {
               <Link
                 href={contactLink.link}
                 onClick={toggle}
-                className={navLinkClass(contactLink.link)}
+                className={drawerLinkClass(contactLink.link)}
                 style={{ display: 'block', padding: '12px 8px', fontSize: 16 }}
               >
                 {contactLink.label}

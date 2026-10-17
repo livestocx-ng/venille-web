@@ -5,6 +5,7 @@ import {
   IconBrandFacebook,
   IconBrandInstagram,
   IconBrandLinkedin,
+  IconBrandTiktok,
   IconBrandTwitter,
 } from '@tabler/icons-react';
 import { Anchor, Box, Container, Grid, Group, Image, Stack, Text } from '@mantine/core';
@@ -16,6 +17,7 @@ const socialLinks = [
   { href: 'https://instagram.com/venille_', icon: IconBrandInstagram, label: 'Instagram' },
   { href: 'https://x.com/venilleng', icon: IconBrandTwitter, label: 'X (Twitter)' },
   { href: 'https://www.linkedin.com/company/venille/', icon: IconBrandLinkedin, label: 'LinkedIn' },
+  { href: 'https://www.tiktok.com/@venille_', icon: IconBrandTiktok, label: 'TikTok' },
 ];
 
 const productLinks = [

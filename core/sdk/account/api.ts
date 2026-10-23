@@ -36,10 +36,7 @@ export interface AccountInfo {
     'status': AccountInfoStatusEnum;
     'fcmToken': string;
     'referralCode': string;
-    'xHandle': string;
-    'instagramHandle': string;
-    'tiktokHandle': string;
-    'snapchatHandle': string;
+    'isOnboardingUploaded': boolean;
 }
 
 export const AccountInfoAccountTypeEnum = {
@@ -87,6 +84,70 @@ export interface DeleteAccountDTO {
 export interface FileUploadResult {
     'url': string;
     'public_id': string;
+}
+export interface GeotekWaterMonitorContactUsDTO {
+    /**
+     * The name of the organization
+     */
+    'organizationName': string;
+    /**
+     * The type of project
+     */
+    'projectType': string;
+    /**
+     * Types of surveys required
+     */
+    'surveyTypes': Array<string>;
+    /**
+     * Latitude coordinate
+     */
+    'latitude': string;
+    /**
+     * Longitude coordinate
+     */
+    'longitude': string;
+    /**
+     * Additional notes about the project
+     */
+    'additionalNotes': string;
+    /**
+     * Urgency level of the request
+     */
+    'urgencyLevel': string;
+    /**
+     * Name of the contact person
+     */
+    'contactName': string;
+    /**
+     * Email address of the contact person
+     */
+    'email': string;
+    /**
+     * Phone number of the contact person
+     */
+    'phoneNumber': string;
+}
+export interface GirlifiedBioContactUsDTO {
+    /**
+     * The name of the user
+     */
+    'name': string;
+    /**
+     * The email of the user
+     */
+    'email': string;
+    /**
+     * Company/Organization of the sender
+     */
+    'companyOrganization': string;
+    /**
+     * Type of Inquiry
+     */
+    'inquiryType': string;
+    /**
+     * The message from the user
+     */
+    'message': string;
 }
 export interface MonthlySurveyHistoryResponse {
     /**
@@ -138,6 +199,16 @@ export interface NotificationsResponse {
     'notifications': Array<NotificationInfo>;
     'totalPages': number;
     'hasNextPage': boolean;
+}
+export interface OnboardingQuestionInfo {
+    'id': string;
+    'question': string;
+    'questionType': string;
+    'optionType': string;
+    'enumType': string;
+    'options': Array<string>;
+    'isUserInput': boolean;
+    'position': number;
 }
 export interface OrderHistoryResponse {
     /**
@@ -232,6 +303,51 @@ export const RegisterMonthlySurveyDTODaysManagingMenstruationEnum = {
 
 export type RegisterMonthlySurveyDTODaysManagingMenstruationEnum = typeof RegisterMonthlySurveyDTODaysManagingMenstruationEnum[keyof typeof RegisterMonthlySurveyDTODaysManagingMenstruationEnum];
 
+export interface RegisterPeriodTrackerDTO {
+    /**
+     * Date of first period.
+     */
+    'lastPeriodStartDate': string;
+    /**
+     * Length of period in days.
+     */
+    'periodLengthDays': number;
+    /**
+     * Length of cycle in days.
+     */
+    'cycleLengthDays': number;
+    /**
+     * Is the period irregular?
+     */
+    'irregularPeriods': boolean;
+    /**
+     * Period symptoms.
+     */
+    'periodSymptoms': string;
+    /**
+     * Is the user tracking ovulation?
+     */
+    'trackingOvulation': boolean;
+    /**
+     * Age of the user.
+     */
+    'age': number;
+    /**
+     * Birth control method.
+     */
+    'birthControlMethods': string;
+    /**
+     * Health condition.
+     */
+    'healthConditions': string;
+}
+export interface ReportAIResponseDTO {
+    'prompt': string;
+    /**
+     * Report response type e.g \"OFFENSIVE\"
+     */
+    'responseType': string;
+}
 export interface UpdateAccountEmailDTO {
     /**
      * New account email.
@@ -290,18 +406,313 @@ export interface UpdateProfileImageDTO {
      */
     'imageUrl': string;
 }
-export interface UpdateSocialHandlesDTO {
-    'xHandle': string;
-    'instagramHandle': string;
-    'tiktokHandle': string;
-    'snapchatHandle': string;
-}
 export interface VerifyNewAccountEmailDTO {
     /**
      * Activation token (OTP)
      */
     'otp': string;
 }
+
+/**
+ * AIAssistantApi - axios parameter creator
+ */
+export const AIAssistantApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {ReportAIResponseDTO} reportAIResponseDTO 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        accountControllerReportAIResponse: async (reportAIResponseDTO: ReportAIResponseDTO, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'reportAIResponseDTO' is not null or undefined
+            assertParamExists('accountControllerReportAIResponse', 'reportAIResponseDTO', reportAIResponseDTO)
+            const localVarPath = `/v1/account/me/report-ai-response`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication bearer required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(reportAIResponseDTO, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * AIAssistantApi - functional programming interface
+ */
+export const AIAssistantApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = AIAssistantApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @param {ReportAIResponseDTO} reportAIResponseDTO 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async accountControllerReportAIResponse(reportAIResponseDTO: ReportAIResponseDTO, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.accountControllerReportAIResponse(reportAIResponseDTO, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['AIAssistantApi.accountControllerReportAIResponse']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+    }
+};
+
+/**
+ * AIAssistantApi - factory interface
+ */
+export const AIAssistantApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = AIAssistantApiFp(configuration)
+    return {
+        /**
+         * 
+         * @param {ReportAIResponseDTO} reportAIResponseDTO 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        accountControllerReportAIResponse(reportAIResponseDTO: ReportAIResponseDTO, options?: RawAxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.accountControllerReportAIResponse(reportAIResponseDTO, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * AIAssistantApi - object-oriented interface
+ */
+export class AIAssistantApi extends BaseAPI {
+    /**
+     * 
+     * @param {ReportAIResponseDTO} reportAIResponseDTO 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    public accountControllerReportAIResponse(reportAIResponseDTO: ReportAIResponseDTO, options?: RawAxiosRequestConfig) {
+        return AIAssistantApiFp(this.configuration).accountControllerReportAIResponse(reportAIResponseDTO, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * GeotekWaterMonitorSupportApi - axios parameter creator
+ */
+export const GeotekWaterMonitorSupportApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {GeotekWaterMonitorContactUsDTO} geotekWaterMonitorContactUsDTO 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        supportControllerGeotekWaterMonitorContactUs: async (geotekWaterMonitorContactUsDTO: GeotekWaterMonitorContactUsDTO, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'geotekWaterMonitorContactUsDTO' is not null or undefined
+            assertParamExists('supportControllerGeotekWaterMonitorContactUs', 'geotekWaterMonitorContactUsDTO', geotekWaterMonitorContactUsDTO)
+            const localVarPath = `/v1/account/support/geotek-water-monitor-contact-us`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(geotekWaterMonitorContactUsDTO, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * GeotekWaterMonitorSupportApi - functional programming interface
+ */
+export const GeotekWaterMonitorSupportApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = GeotekWaterMonitorSupportApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @param {GeotekWaterMonitorContactUsDTO} geotekWaterMonitorContactUsDTO 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async supportControllerGeotekWaterMonitorContactUs(geotekWaterMonitorContactUsDTO: GeotekWaterMonitorContactUsDTO, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.supportControllerGeotekWaterMonitorContactUs(geotekWaterMonitorContactUsDTO, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['GeotekWaterMonitorSupportApi.supportControllerGeotekWaterMonitorContactUs']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+    }
+};
+
+/**
+ * GeotekWaterMonitorSupportApi - factory interface
+ */
+export const GeotekWaterMonitorSupportApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = GeotekWaterMonitorSupportApiFp(configuration)
+    return {
+        /**
+         * 
+         * @param {GeotekWaterMonitorContactUsDTO} geotekWaterMonitorContactUsDTO 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        supportControllerGeotekWaterMonitorContactUs(geotekWaterMonitorContactUsDTO: GeotekWaterMonitorContactUsDTO, options?: RawAxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.supportControllerGeotekWaterMonitorContactUs(geotekWaterMonitorContactUsDTO, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * GeotekWaterMonitorSupportApi - object-oriented interface
+ */
+export class GeotekWaterMonitorSupportApi extends BaseAPI {
+    /**
+     * 
+     * @param {GeotekWaterMonitorContactUsDTO} geotekWaterMonitorContactUsDTO 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    public supportControllerGeotekWaterMonitorContactUs(geotekWaterMonitorContactUsDTO: GeotekWaterMonitorContactUsDTO, options?: RawAxiosRequestConfig) {
+        return GeotekWaterMonitorSupportApiFp(this.configuration).supportControllerGeotekWaterMonitorContactUs(geotekWaterMonitorContactUsDTO, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
+ * GirlifiedSupportApi - axios parameter creator
+ */
+export const GirlifiedSupportApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {GirlifiedBioContactUsDTO} girlifiedBioContactUsDTO 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        supportControllerGirlifiedBioContactUs: async (girlifiedBioContactUsDTO: GirlifiedBioContactUsDTO, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'girlifiedBioContactUsDTO' is not null or undefined
+            assertParamExists('supportControllerGirlifiedBioContactUs', 'girlifiedBioContactUsDTO', girlifiedBioContactUsDTO)
+            const localVarPath = `/v1/account/support/girlified-bio-contact-us`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(girlifiedBioContactUsDTO, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * GirlifiedSupportApi - functional programming interface
+ */
+export const GirlifiedSupportApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = GirlifiedSupportApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @param {GirlifiedBioContactUsDTO} girlifiedBioContactUsDTO 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async supportControllerGirlifiedBioContactUs(girlifiedBioContactUsDTO: GirlifiedBioContactUsDTO, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.supportControllerGirlifiedBioContactUs(girlifiedBioContactUsDTO, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['GirlifiedSupportApi.supportControllerGirlifiedBioContactUs']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+    }
+};
+
+/**
+ * GirlifiedSupportApi - factory interface
+ */
+export const GirlifiedSupportApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = GirlifiedSupportApiFp(configuration)
+    return {
+        /**
+         * 
+         * @param {GirlifiedBioContactUsDTO} girlifiedBioContactUsDTO 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        supportControllerGirlifiedBioContactUs(girlifiedBioContactUsDTO: GirlifiedBioContactUsDTO, options?: RawAxiosRequestConfig): AxiosPromise<void> {
+            return localVarFp.supportControllerGirlifiedBioContactUs(girlifiedBioContactUsDTO, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * GirlifiedSupportApi - object-oriented interface
+ */
+export class GirlifiedSupportApi extends BaseAPI {
+    /**
+     * 
+     * @param {GirlifiedBioContactUsDTO} girlifiedBioContactUsDTO 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    public supportControllerGirlifiedBioContactUs(girlifiedBioContactUsDTO: GirlifiedBioContactUsDTO, options?: RawAxiosRequestConfig) {
+        return GirlifiedSupportApiFp(this.configuration).supportControllerGirlifiedBioContactUs(girlifiedBioContactUsDTO, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
 
 /**
  * ManageContactInfoApi - axios parameter creator
@@ -1424,6 +1835,170 @@ export class NotificationsApi extends BaseAPI {
 
 
 /**
+ * OnboardingApi - axios parameter creator
+ */
+export const OnboardingApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        onboardingControllerGetOnboardingQuestions: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/v1/account/onboarding/questions`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication bearer required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {RegisterPeriodTrackerDTO} registerPeriodTrackerDTO 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        onboardingControllerRegisterPeriodTracker: async (registerPeriodTrackerDTO: RegisterPeriodTrackerDTO, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'registerPeriodTrackerDTO' is not null or undefined
+            assertParamExists('onboardingControllerRegisterPeriodTracker', 'registerPeriodTrackerDTO', registerPeriodTrackerDTO)
+            const localVarPath = `/v1/account/onboarding/period-tracker`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication bearer required
+            // http bearer authentication required
+            await setBearerAuthToObject(localVarHeaderParameter, configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(registerPeriodTrackerDTO, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * OnboardingApi - functional programming interface
+ */
+export const OnboardingApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = OnboardingApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async onboardingControllerGetOnboardingQuestions(options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<OnboardingQuestionInfo>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.onboardingControllerGetOnboardingQuestions(options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OnboardingApi.onboardingControllerGetOnboardingQuestions']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * 
+         * @param {RegisterPeriodTrackerDTO} registerPeriodTrackerDTO 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async onboardingControllerRegisterPeriodTracker(registerPeriodTrackerDTO: RegisterPeriodTrackerDTO, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccountInfo>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.onboardingControllerRegisterPeriodTracker(registerPeriodTrackerDTO, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OnboardingApi.onboardingControllerRegisterPeriodTracker']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+    }
+};
+
+/**
+ * OnboardingApi - factory interface
+ */
+export const OnboardingApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = OnboardingApiFp(configuration)
+    return {
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        onboardingControllerGetOnboardingQuestions(options?: RawAxiosRequestConfig): AxiosPromise<Array<OnboardingQuestionInfo>> {
+            return localVarFp.onboardingControllerGetOnboardingQuestions(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {RegisterPeriodTrackerDTO} registerPeriodTrackerDTO 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        onboardingControllerRegisterPeriodTracker(registerPeriodTrackerDTO: RegisterPeriodTrackerDTO, options?: RawAxiosRequestConfig): AxiosPromise<AccountInfo> {
+            return localVarFp.onboardingControllerRegisterPeriodTracker(registerPeriodTrackerDTO, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * OnboardingApi - object-oriented interface
+ */
+export class OnboardingApi extends BaseAPI {
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    public onboardingControllerGetOnboardingQuestions(options?: RawAxiosRequestConfig) {
+        return OnboardingApiFp(this.configuration).onboardingControllerGetOnboardingQuestions(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {RegisterPeriodTrackerDTO} registerPeriodTrackerDTO 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    public onboardingControllerRegisterPeriodTracker(registerPeriodTrackerDTO: RegisterPeriodTrackerDTO, options?: RawAxiosRequestConfig) {
+        return OnboardingApiFp(this.configuration).onboardingControllerRegisterPeriodTracker(registerPeriodTrackerDTO, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+
+/**
  * OrderApi - axios parameter creator
  */
 export const OrderApiAxiosParamCreator = function (configuration?: Configuration) {
@@ -1602,109 +2177,6 @@ export class OrderApi extends BaseAPI {
      */
     public orderControllerOrderSanitaryPad(orderSanitaryPadDTO: OrderSanitaryPadDTO, options?: RawAxiosRequestConfig) {
         return OrderApiFp(this.configuration).orderControllerOrderSanitaryPad(orderSanitaryPadDTO, options).then((request) => request(this.axios, this.basePath));
-    }
-}
-
-
-
-/**
- * ProtectionApi - axios parameter creator
- */
-export const ProtectionApiAxiosParamCreator = function (configuration?: Configuration) {
-    return {
-        /**
-         * 
-         * @param {UpdateSocialHandlesDTO} updateSocialHandlesDTO 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        accountControllerUpdateSocialHandles: async (updateSocialHandlesDTO: UpdateSocialHandlesDTO, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
-            // verify required parameter 'updateSocialHandlesDTO' is not null or undefined
-            assertParamExists('accountControllerUpdateSocialHandles', 'updateSocialHandlesDTO', updateSocialHandlesDTO)
-            const localVarPath = `/v1/account/me/update-social-handles`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'PATCH', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-            // authentication bearer required
-            // http bearer authentication required
-            await setBearerAuthToObject(localVarHeaderParameter, configuration)
-
-
-    
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-
-            setSearchParams(localVarUrlObj, localVarQueryParameter);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(updateSocialHandlesDTO, localVarRequestOptions, configuration)
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    }
-};
-
-/**
- * ProtectionApi - functional programming interface
- */
-export const ProtectionApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = ProtectionApiAxiosParamCreator(configuration)
-    return {
-        /**
-         * 
-         * @param {UpdateSocialHandlesDTO} updateSocialHandlesDTO 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async accountControllerUpdateSocialHandles(updateSocialHandlesDTO: UpdateSocialHandlesDTO, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccountInfo>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.accountControllerUpdateSocialHandles(updateSocialHandlesDTO, options);
-            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['ProtectionApi.accountControllerUpdateSocialHandles']?.[localVarOperationServerIndex]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
-        },
-    }
-};
-
-/**
- * ProtectionApi - factory interface
- */
-export const ProtectionApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = ProtectionApiFp(configuration)
-    return {
-        /**
-         * 
-         * @param {UpdateSocialHandlesDTO} updateSocialHandlesDTO 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        accountControllerUpdateSocialHandles(updateSocialHandlesDTO: UpdateSocialHandlesDTO, options?: RawAxiosRequestConfig): AxiosPromise<AccountInfo> {
-            return localVarFp.accountControllerUpdateSocialHandles(updateSocialHandlesDTO, options).then((request) => request(axios, basePath));
-        },
-    };
-};
-
-/**
- * ProtectionApi - object-oriented interface
- */
-export class ProtectionApi extends BaseAPI {
-    /**
-     * 
-     * @param {UpdateSocialHandlesDTO} updateSocialHandlesDTO 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    public accountControllerUpdateSocialHandles(updateSocialHandlesDTO: UpdateSocialHandlesDTO, options?: RawAxiosRequestConfig) {
-        return ProtectionApiFp(this.configuration).accountControllerUpdateSocialHandles(updateSocialHandlesDTO, options).then((request) => request(this.axios, this.basePath));
     }
 }
 

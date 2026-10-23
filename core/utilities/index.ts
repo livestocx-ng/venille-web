@@ -18,7 +18,7 @@ export const productDisplayTypes: ProductDisplayType[] = [
 ];
 
 export const navLinks = [
-  { link: '/contact-us', label: 'Contact', target: '' },
+  { link: '/contact-us', label: 'Contact Us', target: '' },
   { link: 'https://ai.venille.com.ng', label: 'Venille AI', target: '_blank' },
   { link: '/us-consulate', label: 'US Consulate', target: '' },
   // { link: '/about-us', label: 'About', target: '' },

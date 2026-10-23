@@ -26,7 +26,7 @@ echo " "
 
 echo "...[GENERATE-ACCOUNT-SDK-PROCESSING]"
 echo " "
-openapi-generator generate -i https://infra-girlified.livestocx.xyz/docs/account-service-json -g typescript-axios -o ../sdk/account 
+openapi-generator generate -i https://infra-venille.livestocx.xyz/docs/account-service-json -g typescript-axios -o ../sdk/account 
 
 echo " "
 echo "...[GENERATE-ACCOUNT-SDK-SUCCESS]"

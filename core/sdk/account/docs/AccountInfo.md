@@ -17,10 +17,7 @@ Name | Type | Description | Notes
 **status** | **string** |  | [default to undefined]
 **fcmToken** | **string** |  | [default to undefined]
 **referralCode** | **string** |  | [default to undefined]
-**xHandle** | **string** |  | [default to undefined]
-**instagramHandle** | **string** |  | [default to undefined]
-**tiktokHandle** | **string** |  | [default to undefined]
-**snapchatHandle** | **string** |  | [default to undefined]
+**isOnboardingUploaded** | **boolean** |  | [default to undefined]
 
 ## Example
 
@@ -40,10 +37,7 @@ const instance: AccountInfo = {
     status,
     fcmToken,
     referralCode,
-    xHandle,
-    instagramHandle,
-    tiktokHandle,
-    snapchatHandle,
+    isOnboardingUploaded,
 };
 ```
 

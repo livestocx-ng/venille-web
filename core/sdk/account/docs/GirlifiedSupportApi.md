@@ -1,31 +1,31 @@
-# ProtectionApi
+# GirlifiedSupportApi
 
-All URIs are relative to *https://infra-girlified.livestocx.xyz*
+All URIs are relative to *https://infra-venille.livestocx.xyz*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**accountControllerUpdateSocialHandles**](#accountcontrollerupdatesocialhandles) | **PATCH** /v1/account/me/update-social-handles | |
+|[**supportControllerGirlifiedBioContactUs**](#supportcontrollergirlifiedbiocontactus) | **POST** /v1/account/support/girlified-bio-contact-us | |
 
-# **accountControllerUpdateSocialHandles**
-> AccountInfo accountControllerUpdateSocialHandles(updateSocialHandlesDTO)
+# **supportControllerGirlifiedBioContactUs**
+> supportControllerGirlifiedBioContactUs(girlifiedBioContactUsDTO)
 
 
 ### Example
 
 ```typescript
 import {
-    ProtectionApi,
+    GirlifiedSupportApi,
     Configuration,
-    UpdateSocialHandlesDTO
+    GirlifiedBioContactUsDTO
 } from './api';
 
 const configuration = new Configuration();
-const apiInstance = new ProtectionApi(configuration);
+const apiInstance = new GirlifiedSupportApi(configuration);
 
-let updateSocialHandlesDTO: UpdateSocialHandlesDTO; //
+let girlifiedBioContactUsDTO: GirlifiedBioContactUsDTO; //
 
-const { status, data } = await apiInstance.accountControllerUpdateSocialHandles(
-    updateSocialHandlesDTO
+const { status, data } = await apiInstance.supportControllerGirlifiedBioContactUs(
+    girlifiedBioContactUsDTO
 );
 ```
 
@@ -33,21 +33,21 @@ const { status, data } = await apiInstance.accountControllerUpdateSocialHandles(
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **updateSocialHandlesDTO** | **UpdateSocialHandlesDTO**|  | |
+| **girlifiedBioContactUsDTO** | **GirlifiedBioContactUsDTO**|  | |
 
 
 ### Return type
 
-**AccountInfo**
+void (empty response body)
 
 ### Authorization
 
-[bearer](../README.md#bearer)
+No authorization required
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 
 ### HTTP response details

@@ -1,6 +1,6 @@
 # MeApi
 
-All URIs are relative to *https://infra-girlified.livestocx.xyz*
+All URIs are relative to *https://infra-venille.livestocx.xyz*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|

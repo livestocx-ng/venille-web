@@ -116,7 +116,7 @@ export const platformFaqs = [
   {
     value: 'What are Venille sanitary pads made of?',
     description:
-      'Venille sanitary pads are made from natural, eco-friendly materials designed to be chemical-free and environmentally friendly, replacing the plastic super absorbent polymers (SAP) used in conventional pads.',
+      'Venille sanitary pads are made from agricultural waste — natural, eco-friendly materials that are chemical-free and environmentally friendly, replacing the plastic super absorbent polymers (SAP) used in conventional pads.',
   },
   {
     value: 'Are Venille pads chemical-free?',
@@ -126,7 +126,7 @@ export const platformFaqs = [
   {
     value: 'How environmentally friendly are Venille pads?',
     description:
-      'Conventional sanitary products contribute significantly to plastic pollution. Venille pads are eco-friendly and designed to reduce environmental harm from menstrual product waste.',
+      'Conventional sanitary products contribute significantly to plastic pollution. Venille pads are made from agricultural waste — eco-friendly and designed to reduce environmental harm from menstrual product waste.',
   },
   {
     value: 'What is Venille AI?',
@@ -155,7 +155,7 @@ export const platformFeatures = [
   {
     title: 'Environmentally Friendly',
     description:
-      'With the increasing danger of plastic pollution at heart, Venille has been developed because conventional sanitary products contribute largely to environmental harm.',
+      'With the increasing danger of plastic pollution at heart, Venille has been developed because conventional sanitary products contribute largely to environmental harm. Our pads are made from agricultural waste, turning plant byproducts into period care that is kinder to the planet.',
     icon: IconLeaf,
   },
   {
@@ -220,7 +220,7 @@ export const appFeatures = [
       positive: false,
     },
     livestocx: {
-      text: 'Uses eco-friendly natural materials',
+      text: 'Made from agricultural waste',
       positive: true,
     },
   },

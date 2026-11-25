@@ -6,7 +6,6 @@ import { IconChevronDown } from '@tabler/icons-react';
 import {
   Box,
   Burger,
-  Button,
   Collapse,
   Container,
   Drawer,
@@ -19,6 +18,7 @@ import {
   UnstyledButton,
 } from '@mantine/core';
 import { useDisclosure, useWindowScroll } from '@mantine/hooks';
+import ShopNowButton from '@/core/components/buttons/shop_now_button';
 import { benchlingColors } from '@/core/themes/venille-colors';
 import { blogPosts, navLinks } from '@/core/utilities';
 import classes from './navbar.module.css';
@@ -89,6 +89,10 @@ export function Navbar() {
                 h={28}
                 w="auto"
                 fit="contain"
+                style={{
+                  filter: navOnHero ? 'brightness(0) invert(1)' : 'none',
+                  transition: 'filter 0.2s ease',
+                }}
               />
             </Link>
 
@@ -183,7 +187,7 @@ export function Navbar() {
                 About Us
               </Link> */}
 
-              {contactLink && (
+              {/* {contactLink && (
                 <Link
                   href={contactLink.link}
                   target={contactLink.target}
@@ -191,15 +195,11 @@ export function Navbar() {
                 >
                   {contactLink.label}
                 </Link>
-              )}
+              )} */}
             </Group>
 
             <Group gap="sm">
-              <Link href="/contact-us" style={{ textDecoration: 'none' }}>
-                <Button variant="filled" size="sm" radius="xl" className={classes.shopBtn}>
-                  Shop Now
-                </Button>
-              </Link>
+              <ShopNowButton />
               <Burger
                 opened={opened}
                 onClick={toggle}

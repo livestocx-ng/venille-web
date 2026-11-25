@@ -1,0 +1,42 @@
+.shopBtn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(135deg, #4175fc 0%, #4175fc 40%, #084af3 100%) !important;
+  border: none !important;
+  color: #fff !important;
+  transition:
+    filter 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.shopBtn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    105deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 65%
+  );
+  transform: translateX(-120%);
+  animation: shopBtnShimmer 4.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.shopBtn:hover {
+  filter: brightness(1.06);
+  box-shadow: 0 4px 14px rgba(8, 74, 243, 0.35);
+}
+
+@keyframes shopBtnShimmer {
+  0% {
+    transform: translateX(-120%);
+  }
+  55%,
+  100% {
+    transform: translateX(120%);
+  }
+}

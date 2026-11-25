@@ -12,6 +12,7 @@ import JourneyFeaturesSection from '@/core/components/home/journey_features';
 import SpotlightAiSection from '@/core/components/home/spotlight_ai_section';
 import SpotlightPadsSection from '@/core/components/home/spotlight_section';
 import StatsBarSection from '@/core/components/home/stats_bar';
+import TractionSection from '@/core/components/home/traction_section';
 import UsConsulateSection from '@/core/components/home/us_consulate_section';
 import TestimonialsSection from '@/core/components/home/testimonials_section';
 import ValueIntroSection from '@/core/components/home/value_intro_section';
@@ -22,16 +23,13 @@ export default function HomePage() {
     <Box style={{ overflowX: 'hidden', width: '100%' }}>
       <Hero />
       <StatsBarSection />
-      <UsConsulateSection />
+      <TractionSection />
       <JourneyFeaturesSection />
       <SpotlightAiSection />
       <ImpactSection />
-      {/* <WhyChooseUsSection /> */}
-      {/* <ValueIntroSection /> */}
-      {/* <HomeStatsSection /> */}
-      {/* <HowItWorksSection /> */}
       <SpotlightPadsSection />
       <ComparisonSection />
+      <UsConsulateSection />
       <TestimonialsSection />
       {/* <FaqPreviewSection /> */}
       <CtaBandSection />

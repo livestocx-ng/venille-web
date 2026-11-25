@@ -1,11 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { IconArrowRight } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
-import { Box, Container, Group, Stack, Text, Title } from '@mantine/core';
-import { TrustPills } from '@/core/components/ui';
-import { venilleColors, venilleLayout, venilleTypography } from '@/core/themes/venille-colors';
+import { Box, Button, Container, Group, Stack, Text, Title } from '@mantine/core';
+import ShopNowButton from '@/core/components/buttons/shop_now_button';
+import { venilleColors, venilleTypography } from '@/core/themes/venille-colors';
 import { venilleEase } from '@/core/utilities/motion';
 
 // const HERO_IMAGE = '/images/hero/image_hero.jpg';
@@ -116,9 +115,9 @@ const Hero = () => (
               color: 'rgba(255,255,255,0.85)',
             }}
           >
-            Venille sanitary pads are{' '}
-            <strong style={{ color: venilleColors.white }}>chemical-free</strong>,{' '}
-            <strong style={{ color: venilleColors.white }}>eco-friendly</strong>, and designed to
+            Venille sanitary pads are made from <strong style={{ color: venilleColors.white }}>eco-friendly</strong> agricultural waste {' '}
+            {/* <strong style={{ color: venilleColors.white }}>chemical-free</strong>,{' '} */}
+            and designed to
             combat period poverty across Africa.
           </Text>
         </motion.div>
@@ -128,49 +127,26 @@ const Hero = () => (
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.25, ease: venilleEase }}
         >
-          <Group gap="sm" justify="center" wrap="wrap">
-            <Link href="/contact-us" style={{ textDecoration: 'none' }}>
-              <Box
-                component="button"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: 10,
-                  padding: '16px 28px',
-                  background: venilleColors.primary,
-                  border: 'none',
-                  borderRadius: venilleLayout.radius.pill,
-                  color: venilleColors.white,
-                  fontWeight: 700,
-                  fontSize: 15,
-                  cursor: 'pointer',
-                }}
-              >
-                Shop Now
-                <IconArrowRight size={18} />
-              </Box>
-            </Link>
-            <Link href="/about-us" style={{ textDecoration: 'none' }}>
-              <Box
-                component="button"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: 8,
-                  padding: '16px 28px',
+          <Group gap="sm" justify="center" wrap="wrap" align="center">
+            <ShopNowButton size="md" withArrow />
+            <Button
+              component={Link}
+              href="/about-us"
+              variant="outline"
+              size="md"
+              radius="xl"
+              styles={{
+                root: {
                   background: 'rgba(255,255,255,0.1)',
-                  border: '1px solid rgba(255,255,255,0.35)',
-                  borderRadius: venilleLayout.radius.pill,
+                  borderColor: 'rgba(255,255,255,0.35)',
                   color: venilleColors.white,
                   fontWeight: 600,
-                  fontSize: 15,
-                  cursor: 'pointer',
                   backdropFilter: 'blur(8px)',
-                }}
-              >
-                Learn More
-              </Box>
-            </Link>
+                },
+              }}
+            >
+              Learn More
+            </Button>
           </Group>
         </motion.div>
 

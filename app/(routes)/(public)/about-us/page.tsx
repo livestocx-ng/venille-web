@@ -197,7 +197,7 @@ export default function AboutUsPage() {
             eyebrow="Mission"
             title="Affordable pads,"
             accent="combating period poverty."
-            description="Venille creates eco-friendly sanitary pads from natural materials — chemical-free, comfortable, and designed to tackle period poverty while protecting the planet."
+            description="Venille creates eco-friendly sanitary pads from agricultural waste — chemical-free, comfortable, and designed to tackle period poverty while protecting the planet."
             chips={['Eco-friendly', 'Chemical-free', 'Comfort-first', 'Made for Nigeria']}
             visual={
               <Box

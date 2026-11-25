@@ -19,7 +19,7 @@ export default function JourneyFeaturesSection() {
     <JourneySection id="features" bg="white">
       <Stack gap={48}>
         <SectionHeader
-          eyebrow="Our solution"
+          // eyebrow="Our solution"
           title="What makes Venille"
           accent="different?"
           description="Sustainable menstrual care that saves the planet without sacrificing comfort or reliability."

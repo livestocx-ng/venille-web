@@ -13,10 +13,10 @@ import { benchlingColors } from '@/core/themes/venille-colors';
 import { VENILLE_EMAIL, VENILLE_PHONE } from '@/core/utilities';
 
 const socialLinks = [
-  { href: 'https://web.facebook.com/venilleng', icon: IconBrandFacebook, label: 'Facebook' },
+  { href: 'https://www.facebook.com/venillepads/', icon: IconBrandFacebook, label: 'Facebook' },
   { href: 'https://instagram.com/venille_', icon: IconBrandInstagram, label: 'Instagram' },
   { href: 'https://x.com/venilleng', icon: IconBrandTwitter, label: 'X (Twitter)' },
-  { href: 'https://www.linkedin.com/company/venille/', icon: IconBrandLinkedin, label: 'LinkedIn' },
+  { href: 'https://www.linkedin.com/company/venille-ng/', icon: IconBrandLinkedin, label: 'LinkedIn' },
   { href: 'https://www.tiktok.com/@venille_', icon: IconBrandTiktok, label: 'TikTok' },
 ];
 

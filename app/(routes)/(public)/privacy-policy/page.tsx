@@ -1,14 +1,10 @@
 'use client';
 
-import { Playfair_Display } from 'next/font/google';
 import { IconMail, IconShieldLock } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
 import { Anchor, Badge, Box, Container, Group, List, Stack, Text, Title } from '@mantine/core';
 
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-});
+const headingFont = 'var(--font-outfit), system-ui, sans-serif';
 
 const PINK = '#084AF3';
 const PINK_LIGHT = 'rgba(8, 74, 243, 0.08)';
@@ -366,7 +362,7 @@ const PrivacyPolicyPage = () => {
               <Title
                 order={1}
                 style={{
-                  fontFamily: playfair.style.fontFamily,
+                  fontFamily: headingFont,
                   fontSize: 'clamp(2rem, 4vw, 2.75rem)',
                   fontWeight: 700,
                   letterSpacing: '-0.5px',
@@ -392,7 +388,7 @@ const PrivacyPolicyPage = () => {
                     <Title
                       order={2}
                       style={{
-                        fontFamily: playfair.style.fontFamily,
+                        fontFamily: headingFont,
                         fontSize: '1.25rem',
                         fontWeight: 700,
                         color: INK,

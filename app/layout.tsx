@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outfit, Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 
 import '@mantine/core/styles.css';
 import '@mantine/dates/styles.css';
@@ -14,16 +14,18 @@ import { SITE_URL } from '@/core/utilities';
 import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
 import { ClientLayout } from '@/core/components/layout/clientLayout';
 
-const outfit = Outfit({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
+const outfit = localFont({
+  src: './fonts/outfit-latin-wght-normal.woff2',
   variable: '--font-outfit',
+  display: 'swap',
+  weight: '100 900',
 });
 
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
+const inter = localFont({
+  src: './fonts/inter-latin-wght-normal.woff2',
   variable: '--font-inter',
+  display: 'swap',
+  weight: '100 900',
 });
 
 export const metadata = {

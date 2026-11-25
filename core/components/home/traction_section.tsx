@@ -38,7 +38,7 @@ export default function TractionSection() {
           whileInView="visible"
           viewport={{ once: true, margin: '-40px' }}
         >
-          <Stack gap={{ base: 40, md: 56 }} maw={640}>
+          <Stack gap={48} maw={640}>
             <motion.div variants={fadeUp}>
               <Text
                 size="xs"
@@ -97,12 +97,7 @@ export default function TractionSection() {
                 pt={{ base: 8, md: 12 }}
                 style={{ borderTop: '1px solid rgba(255,255,255,0.14)' }}
               >
-                <Group
-                  gap={{ base: 28, md: 48 }}
-                  align="flex-start"
-                  wrap="wrap"
-                  pt={{ base: 28, md: 32 }}
-                >
+                <Group gap={40} align="flex-start" wrap="wrap" pt={28}>
                   {supportingMetrics.map((metric, index) => (
                     <motion.div
                       key={metric.label}
